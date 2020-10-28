@@ -1,0 +1,21 @@
+{
+  "name": "bingpic",
+  "version": "1.0.0",
+  "description": "download bing daily picture",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "bing"
+  ],
+  "author": "tanknee",
+  "license": "MIT",
+  "dependencies": {
+    "imagemin": "^7.0.1",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-pngquant": "^9.0.1",
+    "images": "^3.2.3",
+    "superagent": "^6.1.0"
+  }
+}
