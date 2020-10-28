@@ -14,6 +14,7 @@ async function getPic() {
   const { body: dailyInfo, text } = await superagent.get(API_ENDPOINT);
   const date = getFormatDate();
   const fileFolder = `blob/${date}`;
+  if (!fs.existsSync("blob")) fs.mkdirSync("blob");
   if (!fs.existsSync(fileFolder)) {
     fs.mkdirSync(fileFolder);
   }
