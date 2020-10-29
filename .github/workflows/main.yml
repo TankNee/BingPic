@@ -33,8 +33,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create a Release
-        uses: elgohr/Github-Release-Action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        uses: actions/create-release@v1
         with:
-          args: Bing Everyday Picture
+          tag_name: ${{ secrets.GITHUB_RUN_ID }}
+          release_name: Bing Picture Publish
