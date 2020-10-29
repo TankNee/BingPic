@@ -26,15 +26,14 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -A
-          git commit -m "crawl bing picture" -a
+          git commit -m "?? add a BingPic" -a
       - name: 'Push changes'
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-
-
-      - name: Create a Release
-        uses: actions/create-release@v1
+          github_token: ${{ secrets.TOKEN }}
+      - name: 'Create a Release'
+        uses: elgohr/Github-Release-Action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
         with:
-          tag_name: ${{ secrets.GITHUB_RUN_ID }}
-          release_name: Bing Picture Publish
+          args: BingImage
