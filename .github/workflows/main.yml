@@ -33,3 +33,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: 'Create a Release'
         uses: actions/create-release@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
