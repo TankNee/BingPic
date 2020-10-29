@@ -31,7 +31,9 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-      - name: 'Create a Release'
-        uses: actions/create-release@v1
+      - name: Create a Release
+        uses: elgohr/Github-Release-Action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          args: Bing Everyday Picture
