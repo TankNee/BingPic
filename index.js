@@ -7,7 +7,15 @@ const API_ENDPOINT =
 const BING_ENDPOINT = "https://www.bing.com";
 function getFormatDate() {
   const date = new Date();
-  return `${date.getFullYear()}${date.getMonth() + 1}${date.getDate()}`;
+  const month = date.getMonth();
+  if (month < 10 && month > 0) {
+    month = `0${month}`;
+  }
+  const day = date.getDate();
+  if (day < 10 && day > 0) {
+    day = `0${day}`;
+  }
+  return `${date.getFullYear()}${month}${day}`;
 }
 
 async function getPic() {
