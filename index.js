@@ -7,11 +7,11 @@ const API_ENDPOINT =
 const BING_ENDPOINT = "https://www.bing.com";
 function getFormatDate() {
   const date = new Date();
-  const month = date.getMonth();
+  let month = date.getMonth() + 1;
   if (month < 10 && month > 0) {
     month = `0${month}`;
   }
-  const day = date.getDate();
+  let day = date.getDate();
   if (day < 10 && day > 0) {
     day = `0${day}`;
   }
