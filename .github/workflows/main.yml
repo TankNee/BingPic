@@ -33,9 +33,9 @@ jobs:
         continue-on-error: true
         with:
           github_token: ${{ secrets.RELEASE_TOKEN }}
-      - name: 'Create Release'
-        uses: elgohr/Github-Release-Action@master
+      - name: "Create Release"
+        uses: elgohr/Github-Release-Action@v4
         env:
-          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+            GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
         with:
-          args: BingEverydayImage
+            title: BingPic
